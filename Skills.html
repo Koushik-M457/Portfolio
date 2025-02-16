@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Portfolio</title>
+
+        <style>
+            /* General Styles */
+/* General Styles */
+/* General Styles */
+/* General Styles */
+/* General Styles */
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a2e; /* Dark navy blue */
+    color: white;
+}
+
+.header {
+    background-color: #0f3460; /* A slightly lighter navy shade */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.header .logo {
+    font-size: 24px;
+    color: white;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    color: #e94560; /* Coral pink */
+}
+
+h2 {
+    text-align: center;
+    font-size: 28px;
+    margin: 20px 0;
+    text-transform: uppercase;
+    color: #f4a261; /* Orange for headings */
+}
+
+/* Skills Section */
+.skills-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Grid Styles */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+.navbar{
+    animation: fadeIn 1.5s ease forwards;
+
+}
+.box {
+    background: #ffcc00; /* Golden yellow */
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Start below the view */
+    animation: fadeIn 1s forwards;
+    animation-delay: var(--delay);
+}
+
+.box img {
+    max-width: 80px;
+    margin-bottom: 10px;
+}
+
+.box h3 {
+    color: #1a1a2e; /* Navy blue for skill names to match the background */
+    font-size: 20px;
+}
+
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <a href="#" class="logo">Portfolio</a>
+            <nav class="navbar">
+                <a href="index.html" style="--i:1;" class="active">Home</a>
+                <a href="about.html" style="--i:2;">About</a>
+                <a href="Skills.html" style="--i:3;">Skills</a>
+                <a href="project.html" style="--i:4;">Projects</a>
+                <a href="contact.html" style="--i:5;">Contact</a>
+            </nav>
+        </header>
+        <div class="skills-section">
+            <!-- Languages -->
+            <h2>Languages</h2>
+            <div class="grid-container">
+                <div class="box">
+                    <img src="python.png" alt="Python">
+                    <h3>PYTHON</h3>
+                </div>
+                <div class="box">
+                    <img src="java.png" alt="Java" style="height: 60%; " width="60%">
+                    <h3>JAVA</h3>
+                </div>
+                <div class="box">
+                    <img src="html.png" alt="HTML">
+                    <h3>HTML</h3>
+                </div>
+                <div class="box">
+                    <img src="css.png" alt="CSS">
+                    <h3>CSS</h3>
+                </div>
+                <div class="box">
+                    <img src="sql1.png" alt="SQL">
+                    <h3>SQL</h3>
+                </div>
+                <div class="box">
+                    <img src="scala1.png" alt="Scala">
+                    <h3>SCALA</h3>
+                </div>
+                <div class="box">
+                    <img src="js.png" alt="Javascript">
+                    <h3>Javascript</h3>
+                </div>
+            </div>
+            <!-- Frameworks -->
+            <h2>Frameworks</h2>
+            <div class="grid-container">
+                <div class="box">
+                    <img src="pandas1.png" alt="Pandas">
+                    <h3>PANDAS</h3>
+                </div>
+                <div class="box">
+                    <img src="tensorflow1.png" alt="TensorFlow">
+                    <h3>TENSORFLOW</h3>
+                </div>
+                <div class="box">
+                    <img src="flask1.png" alt="Flask">
+                    <h3>FLASK</h3>
+                </div>
+                <div class="box">
+                    <img src="opencv1.png" alt="OpenCV">
+                    <h3>OPENCV</h3>
+                </div>
+            </div>
+            <!-- Tools -->
+            <h2>Tools</h2>
+            <div class="grid-container">
+                <div class="box">
+                    <img src="tableau1.png" alt="Tableau">
+                    <h3>TABLEAU</h3>
+                </div>
+                <div class="box">
+                    <img src="docker1.png" alt="Docker">
+                    <h3>DOCKER</h3>
+                </div>
+                <div class="box">
+                    <img src="git1.png" alt="Git">
+                    <h3>GIT</h3>
+                </div>
+                <div class="box">
+                    <img src="github1.png" alt="GitHub">
+                    <h3>GITHUB</h3>
+                </div>
+            </div>
+            <!-- Platforms -->
+            <h2>Platforms</h2>
+            <div class="grid-container">
+                <div class="box">
+                    <img src="colob1.png" alt="Google Colab" style="height: 60%; " width="60%">
+                    <h3>GOOGLE COLAB</h3>
+                </div>
+                <div class="box">
+                    <img src="vscode1.png" alt="VS Code">
+                    <h3>VISUAL STUDIO CODE</h3>
+                </div>
+                <div class="box">
+                    <img src="jupyter1.png" alt="Jupyter Notebook" style="height: 50%; " width="60%">
+                    <h3>JUPYTER NOTEBOOK</h3>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

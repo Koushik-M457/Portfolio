@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <title>Portfolio</title>
+        <style>
+            /* Global Styles */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Poppins', sans-serif;
+                outline: none;
+                border: none;
+                text-decoration: none;
+                text-transform: capitalize;
+                transition: .2s linear;
+            }
+
+            body {
+                font-family: 'Arial', sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #1a1a2e; /* Dark navy blue */
+                color: white;
+            }
+
+            /* Header */
+            .header {
+                background-color: #57494e; /* A slightly lighter navy shade */
+                padding: 10px 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: sticky;
+                top: 0;
+                z-index: 10;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            }
+
+            .header .logo {
+                font-size: 24px;
+                color: white;
+            }
+
+            .navbar a {
+                color: white;
+                text-decoration: none;
+                margin-left: 20px;
+                font-size: 18px;
+            }
+
+            .navbar a:hover {
+                color: #e94560; /* Coral pink */
+            }
+
+            /* Contact Section */
+            .contact {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 120px 10%;
+                gap: 40px;
+            }
+
+            .contact-content {
+                flex: 1;
+                max-width: 50%;
+                opacity: 0;
+                animation: fadeInText 1.5s ease forwards;
+                animation-delay: 0.5s; /* Delay for smooth transition */
+            }
+
+            .contact-content h3 {
+                font-size: 24px;
+                color: #e94560;
+                margin-bottom: 10px;
+            }
+
+            .contact-content h1 {
+                font-size: 36px;
+                color: white;
+                margin-bottom: 10px;
+            }
+
+            .contact-content h3 span {
+                font-weight: bold;
+                color: #e94560;
+            }
+
+            .contact-content p {
+                font-size: 18px;
+                line-height: 1.8;
+                color: #b8b8d2;
+                margin-top: 20px;
+            }
+
+            .social-media a {
+                margin-top: 20px;
+                display: inline-block;
+                font-size: 24px;
+                color: #e94560;
+                transition: color 0.3s ease;
+            }
+
+            .social-media a:hover {
+                color: #fff;
+            }
+
+            .btm {
+                display: inline-block;
+                margin-top: 20px;
+                padding: 10px 30px;
+                border: 2px solid #e94560;
+                color: #e94560;
+                font-size: 16px;
+                text-transform: uppercase;
+                border-radius: 5px;
+                text-decoration: none;
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+
+            .btm:hover {
+                background-color: #e94560;
+                color: white;
+            }
+
+            .contact-img {
+                    flex: 1;
+                    text-align: center;
+            }
+
+            .contact-img {
+                width: 60%;
+                    height: 40;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+                    opacity: 0;
+                    animation: fadeIn 1s ease forwards;
+            }
+            
+        
+            
+
+            /* Mobile Responsive */
+            @media (max-width: 768px) {
+                .contact {
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 80px 5%;
+                }
+
+                .contact-content,
+                .contact-img {
+                    max-width: 100%;
+                    text-align: center;
+                }
+
+                .contact-content h1 {
+                    font-size: 30px;
+                }
+
+                .contact-content p {
+                    font-size: 16px;
+                }
+
+                .social-media a {
+                    font-size: 20px;
+                }
+            }
+
+            /* Keyframe Animations */
+            @keyframes fadeIn {
+                0% {
+                    opacity: 0;
+                    transform: translateY(50px);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @keyframes fadeInText {
+                0% {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <a href="#" class="logo">Portfolio</a>
+            <nav class="navbar">
+                <a href="index.html" style="--i:1;" class="active">Home</a>
+                <a href="about.html" style="--i:2;">About</a>
+                <a href="Skills.html" style="--i:3;">Skills</a>
+                <a href="project.html" style="--i:4;">Projects</a>
+                <a href="contact.html" style="--i:5;">Contact</a>
+            </nav>
+        </header>
+
+        <section class="contact">
+            <div class="contact-content">
+                <h3>Hello</h3>
+                <h1>I'm Koushik M</h1>
+                <h3>And I'm a <span>Passionate B.Tech Student</span></h3>
+                <p>With a strong foundation in Python, Machine Learning, and Data Structures, I have actively applied my skills to solve real-world problems through projects like AI-Powered Resume Analyzer</p>
+                <a href="https://drive.google.com/file/d/13sq2oijNmBBedFiwaS3dxPnJ1Ztv8czR/view?usp=drive_link " target="_blank"     class="btm">Download CV</a>
+            </div>
+            <div class="contact-img">
+                <img src="mine.png" alt="Koushik" class="circle-img">
+            </div>
+            
+        </section>
+    </body>
+</html>

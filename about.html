@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            text-transform: capitalize;
+            transition: .2s linear;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a2e; /* Dark navy blue */
+            color: white;
+        }
+
+        /* Header */
+        .header {
+            background-color: #0f3460; /* A slightly lighter navy shade */
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        .header .logo {
+            font-size: 24px;
+            color: white;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 18px;
+        }
+        .navbar a:hover {
+            color: #e94560; /* Coral pink */
+        }
+
+        /* Home Section */
+        .home {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 120px 10%;
+        }
+        .pro1 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .pro1-img {
+            flex: 1;
+            text-align: center;
+        }
+            .pro1-img img {
+                max-width: 100%;
+    width: 320px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(12, 12, 12, 0.5);
+    animation: fadeIn 1s ease forwards;
+
+            }
+            
+        .pro1-text {
+            flex: 1;
+            max-width: 50%;
+            padding-left: 20px;
+            opacity: 0;
+            animation: fadeInText 1s ease forwards;
+            animation-delay: 0.5s; /* Delay to make text appear after the image */
+        }
+        .pro1-text h4 {
+            font-size: 36px;
+            color: #e94560; /* Coral pink */
+            margin-bottom: 10px;
+        }
+        .pro1-text h6 {
+            font-size: 20px;
+            color: white;
+            margin-bottom: 8px;
+        }
+        .pro1-text p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #b8b8d2;
+            margin-top: 20px;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .home {
+                padding: 100px 5%;
+            }
+            .pro1 {
+                flex-direction: column;
+                text-align: center;
+            }
+            .pro1-img {
+                max-width: 100%;
+            }
+            .pro1-text {
+                max-width: 100%;
+                padding: 0;
+            }
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .navbar{
+            animation: fadeIn 1.5s ease forwards;
+        }
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+        <nav class="navbar">
+            <a href="index.html" style="--i:1;" class="active">Home</a>
+            <a href="about.html" style="--i:2;">About</a>
+            <a href="Skills.html" style="--i:3;">Skills</a>
+            <a href="project.html" style="--i:4;">Projects</a>
+            <a href="contact.html" style="--i:5;">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="pro1">
+            <div class="pro1-img">
+                <img src="mine.png" alt="Koushik M">
+            </div>
+            <div class="pro1-text">
+                <h4>Koushik M</h4>
+                <h6>A passionate B.Tech student specializing in Artificial Intelligence and Data Science</h6>
+                <h6>Karpagam College of Engineering, Coimbatore</h6>
+                <h6>CGPA: 7.50</h6>
+                <p>Hello! My name is Koushik M, and I am an emerging professional in the fields of 
+                    Artificial Intelligence and Data Science, based in Coimbatore, India. Driven by a deep 
+                    passion for technology and analytical problem-solving, I focus on Python development,
+                     machine learning, and MLOps. My objective is to harness the power of AI to address intricate challenges, 
+                     enhance organizational efficiency, and facilitate data-driven decision-making. I am dedicated to continuous 
+                    learning and actively exploring cutting-edge technologies to remain at the forefront of the industry.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
